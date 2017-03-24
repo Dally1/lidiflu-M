@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Want to buy green energy? Come visit our site to find out more!">
     <meta name="keywords" content="Green, Energy, Wind, Clean, Buy, Renewable, Turbine, Windmill, Solar, Earth, Caring, Planet">
+    <script src="JavaScript/simpleCart.js"> </script>
+    <script src="JavaScript/jquery-3.1.1.js"> </script>
     <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="normalize.css" type="text/css" rel="stylesheet">
@@ -13,8 +15,22 @@
     <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="Images/logo.png">
+
+
 </head>
 <body>
+<script> // This is the cart system
+simpleCart({
+    checkout: {
+        type: "PayPal",
+        email: "stefandally@gmail.com"
+    }
+});
+
+simpleCart({
+    currency: "GBP" //Setting currency to £ sterling
+});
+</script>
 <!-- .container is main centered wrapper -->
 <div class="container">
 
@@ -46,6 +62,9 @@
         </div> <!-- End of row div -->
     </nav>
     <h1>Our Products</h1>
+    <li class="simpleCart_quantity"></li>
+    <li class="simpleCart_total"></li>
+    <li> <a href="javascript:;" class="simpleCart_empty"><p> Empty The Cart </p>	</a></li> <!--This emptys the cart -->
 
     <header>
         <ul>
@@ -54,46 +73,30 @@
             </i>
         </ul>
     </header>
-    <div class='rows'>
-        <div class='product--blue'>
-            <div class='product_inner'>
-                <img src='Images/placeholder.png' width='300'>
-                <p>Sample Item</p>
-                <p>Sample Item</p>
-                <p>Price £199.99</p>
-                <button>Add to basket</button>
-            </div>
-            <div class='product_overlay'>
-                <h2>Added to basket</h2>
-                <i class='fa fa-check'></i>
-            </div>
+    <div class="product simpleCart_shelfItem">
+        <div class="product--blue">
+            <div class="product_inner">
+        <img src="Images/placeholder.png" alt="product">
+        <div class ="productDescription">
+            <h4 class ="item_name">Blue Flannel</h4>
+            <p> &pound;<span class = "item_price">15</span> </p> <!--This is price-->
+            <a href="javascript:;" class="item_add"><button class="btn-p">Add to cart</button> </a>
+
+
+    </div>
         </div>
-        <div class='product--orange'>
-            <div class='product_inner'>
-                <img src='Images/placeholder.png' width='300'>
-                <p>Sample Item</p>
-                <p>Sample Item</p>
-                <p>Price £99.99</p>
-                <button>Add to basket</button>
+        <div class="product simpleCart_shelfItem">
+            <div class="product--red">
+                <div class="product_inner">
+                    <img src="Images/placeholder.png" alt="product">
+                    <div class ="productDescription">
+                        <h4 class ="item_name">Blue Flannel</h4>
+                        <p> &pound;<span class = "item_price">15</span> </p> <!--This is price-->
+                        <a href="javascript:;" class="item_add"><button class="btn-p">Add to cart  </button> </a>
+
+                    </div>
+                </div>
             </div>
-            <div class='product_overlay'>
-                <h2>Added to basket</h2>
-                <i class='fa fa-check'></i>
-            </div>
-        </div>
-        <div class='product--red'>
-            <div class='product_inner'>
-                <img src='Images/placeholder.png' width='300'>
-                <p>Sample Item</p>
-                <p>Sample Item</p>
-                <p>Price £399.99</p>
-                <button>Add to basket</button>
-            </div>
-            <div class='product_overlay'>
-                <h2>Added to basket</h2>
-                <i class='fa fa-check'></i>
-            </div>
-        </div>
         <div class='product--green'>
             <div class='product_inner'>
                 <img src='Images/placeholder.png' width='300'>

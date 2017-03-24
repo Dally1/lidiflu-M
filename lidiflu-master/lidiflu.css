@@ -37,6 +37,7 @@ textarea{
     color: white !important;
 
 }
+
 /* This is for mobile view */
 @media screen and (max-width: 750px) {
     #login {
@@ -123,7 +124,7 @@ textarea{
 
 .product, .product--blue, .product--orange, .product--red, .product--green, .product--yellow, .product--pink {
     box-shadow: 1px 5px 15px #CCC;
-    width: 15em;
+    width: auto;
     height: auto;
     border-radius: 3px;
     padding: 2em;
